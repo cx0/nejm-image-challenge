@@ -32,8 +32,13 @@ print(res)
 
 ```
 
+### Diagnostic accuracy of multimodal models in NEJM Image Challenge
+
+- [TODO] GPT4-V, Gemini Pro, CogVLM
+
+
 ### Dataset notes
-- GPT4-V model flagged four images (`image_id`: 206, 480, 676 and 715)that potentially contained content that may be considered policy violation. Consequently, you may consider excluding these images from any subsequent analyses.
+- GPT4-V model flagged four images (`image_id`: 206, 480, 676 and 715) that potentially contained content that may be considered policy violation. Consequently, you may consider excluding these images from any subsequent analyses.
 
 - Most benchmark studies use proportion of humans (medical experts, NEJM readers, healthcare professionals) who answer correctly as the human baseline and proxy for difficulty level ("Proportion correct"). We used an alternative method (Brier score) that takes into consideration the distribution of votes across all available multiple choice options. Brier score for each question was calculated as the mean squared error between observed responses (e.g., [A: 0.12, B: 0.65, C: 0.16, D: 0.05, E: 0.02]) and predicted response given the correct answer (e.g., [A: 0.0, B: 1.0, C: 0.0, D: 0.0, E: 0.0]). A lower Brier score indicates higher predictive accuracy and therefore an easier question. When assessing the difficulty level, there is very high concordance between the proportion correct and Brier score as shown [here](/figures/brier_score.png). Brier score for each question is provided in the dataset.
 
